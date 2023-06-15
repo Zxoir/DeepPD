@@ -22,7 +22,6 @@ Wanted System:
   KillOfficer: 25
   MaximumLevel: 5
   0:
-    WantedDuration: "2m"
     JailDuration: "1m"
   1:
     Points: 10

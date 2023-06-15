@@ -14,6 +14,8 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Instant;
 
 public class IncidentsCommand implements CommandExecutor {
 
@@ -39,10 +41,10 @@ public class IncidentsCommand implements CommandExecutor {
         }
 
         if (criminal.isJailed())
-            sender.sendMessage("This criminal is jailed for " + TimeManager.formatTime(criminal.getJailDuration().toEpochMilli()));
+            sender.sendMessage("This criminal is jailed for " + TimeManager.formatTime(Duration.between(Instant.now(), criminal.getJailDuration()).getSeconds()));
 
         if (criminal.getLevel() > 0)
-            sender.sendMessage("This criminal is wanted for " + TimeManager.formatTime(criminal.getWantedDuration().toEpochMilli()));
+            sender.sendMessage("This criminal is wanted for " + TimeManager.formatTime(Duration.between(Instant.now(), criminal.getWantedDuration()).getSeconds()));
 
         if (criminal.getIncidents().isEmpty()) {
             sender.sendMessage("This player doesn't have any incidents yet.");

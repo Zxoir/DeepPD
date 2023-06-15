@@ -1,6 +1,7 @@
 package me.zxoir.deeppd.commands;
 
 import me.zxoir.deeppd.managers.ConfigManager;
+import me.zxoir.deeppd.managers.CriminalManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -26,6 +27,8 @@ public class DeepPDCommand implements CommandExecutor {
         }
 
         player.sendMessage("/deeppd reload");
+        player.sendMessage(CriminalManager.getCachedCriminals().getIfPresent(player.getUniqueId()).getDefaultWantedDuration() + "");
+        player.sendMessage(CriminalManager.getCachedCriminals().getIfPresent(player.getUniqueId()).getDefaultJailDuration() + "");
 
         return true;
     }
