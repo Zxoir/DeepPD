@@ -1,0 +1,75 @@
+InvalidPermissionMessage: "&c&lYou don't have permission to use this command"
+PoliceChatPrefix: "&9&lPolice Chat (%player%) &8» &r"
+PoliceSayPrefix: "&9&lPolice Announcement &8» &r"
+
+# Amount of times an Officer has to hit a player with a Baton to jail them
+HitsToJail: 2
+
+# Announcement message that will be broadcasted when a player is jailed
+JailAnnounce: "%player% has been jailed by %officer%!"
+
+PoliceTP:
+  MinDistance: 200
+  MaxDistance: 400
+
+Wanted System:
+  PointsDelay: 20
+  HitWithFist: 5
+  HitWithWeapon: 10
+  HitPoliceWithFist: 10
+  HitPoliceWithWeapon: 15
+  KillPlayer: 20
+  KillOfficer: 25
+  MaximumLevel: 5
+  0:
+    WantedDuration: "2m"
+    JailDuration: "1m"
+  1:
+    Points: 10
+    WantedDuration: "4m"
+    JailDuration: "2m"
+  2:
+    Points: 25
+    WantedDuration: "6m"
+    JailDuration: "4m"
+  3:
+    Points: 40
+    WantedDuration: "8m"
+    JailDuration: "6m"
+  4:
+    Points: 60
+    WantedDuration: "10m"
+    JailDuration: "8m"
+  5:
+    Points: 100
+    WantedDuration: "12m"
+    JailDuration: "10m"
+
+
+Promote System:
+  JrPolice:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""
+  SrPolice:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""
+  Chief:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""
+
+Demote System:
+  Citizen:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""
+  JrPolice:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""
+  SrPolice:
+    Command: ""
+    Announce: ""
+    PoliceChat: ""

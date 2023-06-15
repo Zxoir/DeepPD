@@ -1,0 +1,41 @@
+name: DeepPD
+version: '${project.version}'
+main: me.zxoir.deeppd.DeepPD
+commands:
+  deeppd:
+    description: Main Command
+    usage: /deeppd
+  getbaton:
+    description: Get a Police Baton
+    usage: /getbaton
+  duty:
+    description: Police duty
+    usage: /duty
+  police:
+    description: Police Command
+    usage: /police
+  policechat:
+    description: Police chat
+    usage: /policechat
+    aliases: [pc]
+  policesay:
+    description: Police announcement
+    usage: /policesay
+    aliases: [ps,psay]
+  policechattoggle:
+    description: Police Chat Toggle
+    usage: /policechattoggle
+    aliases: [pctoggle, pct]
+  policetp:
+    description: Teleports police near criminal
+    usage: /policetp <Player>
+    aliases: [ptp]
+  release:
+    description: Release players from jail
+    usage: /release <Player>
+  incidents:
+    description: Shows a list of a players incidents
+    usage: /incidents <Player>
+  wanted:
+    description: Wanted Commands
+    usage: /wanted
